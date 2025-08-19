@@ -1,0 +1,21 @@
+<% layout('/layouts/boilerplate') -%>
+<body>
+  <div class="container mt-4">
+    <div class="row justify-content-center">
+        <h4>All Listings</h4>
+      <% for(let listing of allListing) { %>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+          <div class="card h-100">
+            <a href="/listings/<%= listing._id %>">
+              <img src="<%= listing.image.url %>" class="card-img-top" alt="Listing image">
+            </a>
+            <div class="card-body">
+              <p class="card-title"><%= listing.title %></p>
+              <p class="card-price">Price :&#8377;&nbsp;<%= listing.price %></p>
+            </div>
+          </div>
+        </div>
+      <% } %>
+    </div>
+  </div>
+</body>

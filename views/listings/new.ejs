@@ -1,0 +1,49 @@
+<% layout('/layouts/boilerplate') -%>
+
+<body>
+    <div class="row">
+        <div class="col-8 offset-2">
+             <h5>ADD NEW LISTING</h5>
+             <br>
+      
+    <form method="POST" action="/listings">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" name="listing[title]" placeholder="Ex: Cozy 2BHK Apartment" class="form-control">
+        </div>
+        
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea name="listing[description]" type="text" placeholder="Ex: Spacious apartment with sea view and modern amenities" class="form-control"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="image" class="form-label">Image</label>
+            <input name="listing[image]" type="text" placeholder="Ex: https://example.com/image.jpg" class="form-control">
+        </div>
+
+        <div class="row">
+            <div class="mb-3 col-md-4">
+                <label for="price" class="form-label">Price</label>
+                <input name="listing[price]" placeholder="Ex: 1500" type="number" class="form-control">
+            </div>
+               
+            <div class="mb-3 col-md-8">
+                <label for="location" class="form-label">Location</label>
+                <input name="listing[location]" placeholder="Ex: MG Road, Bengaluru" type="text" class="form-control">
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="country" class="form-label">Country</label>
+            <input name="listing[country]" type="text" placeholder="Ex: India" class="form-control">
+        </div>
+                
+        <button class="btn btn-dark add-btn">ADD</button>
+    </form>
+    <br>
+    <br>
+    <br>
+      </div>
+    </div>
+</body>
